@@ -12,33 +12,29 @@ class Main {
             System.out.println(" Sure we can " + op);
 
             System.out.println("You entered operator  " + op);
-            String str = sc.nextLine();
             System.out.println("go ahead and enter in your first value");
             int val = sc.nextInt();
             System.out.println("go ahead and enter in your second value");
-            int valtwo = sc.nextInt();
-            System.out.println("You entered values " + val + " and " + valtwo);
-            System.out.println(" Awesome! Now lets take " + val + " and " + valtwo + " and " + op + " them ");
+            int val2 = sc.nextInt();
+            System.out.println("You entered values " + val + " and " + val2);
+            System.out.println(" Awesome! Now lets take " + val + " and " + val2 + " and " + op + " them ");
+            int result=0;
             if (op == '+') {
-                int result = val + valtwo;
-                System.out.println(result);
+                 result = val + val2 ;
             }
             if (op == '-') {
-                int result = val - valtwo;
-                System.out.println(result);
+                 result = val - val2;
             }
             if (op == '*') {
-                int result = val * valtwo;
-                System.out.println(result);
+                 result = val * val2;
             }
             if (op == '/') {
-                int result = val / valtwo;
-                System.out.println(result);
+                 result = val / val2;
             }
             if (op == '%') {
-                int result = val % valtwo;
-                System.out.println(result);
+                 result = val % val2;
             }
+            System.out.println(result);
         } else {
             System.out.println("ERROR : " + op + " Not supported");
         }
