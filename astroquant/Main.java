@@ -34,10 +34,30 @@ public class Main {
                             case '%' -> val % val2;
                             case '*' -> val * val2;
                             default -> 0;
-
                         };
                         System.out.println(result);
                     }
+                    case 'S', 'T', 'C' -> {
+                        if (op == 's')
+                            op = 'S';
+                        if (op == 't')
+                            op = 'T';
+                        if (op == 'c')
+                            op = 'C';
+                        System.out.println(" Sure we can " + op);
+                        System.out.println("You entered operator  " + op);
+                        System.out.println("go ahead and enter in your first value in degrees");
+                        double val = sc.nextDouble();
+                        double radians = Math.toRadians(val);
+                        double result = switch (op) {
+                            case 'S' -> Math.sin(radians);
+                            case 'T' -> Math.tan(radians);
+                            case 'C' -> Math.cos(radians);
+                            default -> 0;
+                        };
+                        System.out.println(result);
+                    }
+
                     default -> System.out.println("ERROR : " + op + " Not supported");
                 }
             } while (op != 'Q');
